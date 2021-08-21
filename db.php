@@ -1,5 +1,5 @@
 <?php
-
+//NGUYEN QUANG THUAN
 $servidor = "localhost";
 $usuario = "root";
 $senha = "";
