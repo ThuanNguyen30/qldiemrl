@@ -1,0 +1,142 @@
+/* ESTILO.CSS */
+
+* { 
+	margin: 0; 
+	padding: 0; 
+}
+
+.wrap {
+	width:10px; 
+	margin-left:300px;
+	margin-bottom: 10px;
+	z-index:1;
+}
+
+.msg {
+  color: whitesmoke;
+  text-align:center;
+  margin-top: 270px !important;
+  font-family: 'Bree Serif', Courier, monospaced;
+  font-size:2.1em;
+  width:200px;
+  position:absolute;
+  margin:65px 0 0 50px;
+  pointer-events: none; 
+}
+
+.sticker {
+  width:300px;
+  height:200px;
+  margin-top: 200px !important;
+  position:absolute;
+  background: url(http://localhost:8080/UDEMY/CRUD-PHP-MYSQL/img/sticker.png) top center no-repeat;
+  animation: spin 30s linear infinite;
+  /*Set our animation play state to running initially */
+  animation-play-state: running;
+  opacity: 0.6; 
+}
+
+.sticker:hover {
+  /* Toggle our animation play state to paused when we are hovering over our sticker */
+  animation-play-state: paused;
+
+}
+
+@keyframes spin {
+  100% {transform: rotate(1turn); }
+}
+
+html {
+    height: 100%;
+    min-height: 100%;
+}
+
+body { 
+	display: flex;
+    flex-direction: column;
+    min-height: 100%;
+	font-family: helvetica, arial; 
+	font-size: 16px; 
+	background-image: linear-gradient(to right, rgba(37, 148, 70, 0.1), rgba(37, 148, 70, 0.5));
+	color:#333; 
+}
+
+header { 
+	height: 90px; 
+	background-color: rgba(38, 38, 38, 0.9);
+	padding: 10px 0;
+}
+
+footer {
+	margin-top: auto;
+	height: 105px;
+	background-color: rgba(38, 38, 38, 0.9) !important;
+	padding: 10px 0;
+	font-size: 14px;
+	text-align: center;
+	color: #fff !important;
+}
+
+footer a {
+	float: right;
+}
+
+
+footer div.logo-rodape {
+	margin-right: 100px;
+}
+
+footer div b:hover {
+	text-decoration-line: underline;
+}
+
+
+/* Class*/
+.container {
+	margin: 0 auto;
+	width: 960px;
+}
+
+.custom-div {
+	padding: 140px;
+}
+
+.table {
+	border:1px solid #ccc; 
+	width: 100%;
+}
+
+
+.btn-dark:hover {
+  color: #fff;
+  background-color: #218838;
+  border-color: #1e7e34;
+}
+
+
+/* Id */
+#conteudo {
+	padding: 50px 0;
+}
+
+#menu {
+	float: right;
+	padding: 0 0;
+}
+#menu a {
+	font-size: 16px;
+	text-decoration: none;
+	padding: 25px 35px;
+	color: #e3e3e3;
+}
+
+#menu a:hover {
+	background-color: rgba(68, 184, 116, 0.9);
+	text-shadow:  #000;
+	color: #000;
+}
+
+#cursos-delete, #matriculas-delete, #alunos-delete {
+	color: #ff0b00;
+}
+
