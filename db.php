@@ -25,11 +25,26 @@ $consulta_hocky = mysqli_query($conexao, $query);
 $query = "SELECT * FROM users";
 $consulta_users = mysqli_query($conexao, $query);
 
+$query = "SELECT * FROM diemrenluyen";
+$consulta_alldiem = mysqli_query($conexao, $query);
+
 // Carregando diemrenluyen
 if (isset( $_SESSION['username'])) {
 	$username =  $_SESSION['username'];
 	$query = "SELECT * FROM diemrenluyen WHERE username = '$username'";
 	$consulta_diemrenluyen = mysqli_query($conexao, $query);
+
+	$query = "SELECT malop FROM users WHERE username = '$username'";
+	$dbuser = mysqli_query($conexao, $query);
+
+	$data = mysqli_fetch_row($dbuser);
+	$malop = $data[0];
+	$query = "SELECT username FROM users WHERE malop = '$malop' and quyen = 0";
+	echo $query;
+	$consulta_userofclass = mysqli_query($conexao, $query);
+
+	//}
+	//consulta_diemrenluyen_review 
 }
 
 

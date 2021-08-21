@@ -4,9 +4,6 @@
 <h1>Đánh giá điểm rèn luyện</h1>
 <script src="js/diemrenluyen.js"></script>
 <form method="post" action="processa_diemrenluyen.php">
-
-
-	
     <table style="border-collapse:collapse;border:none;">
     <tbody>
         <tr>

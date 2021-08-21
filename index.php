@@ -32,6 +32,7 @@ switch ($pagina) {
 	case 'diemrenluyen': include 'views/diemrenluyen.php'; break;
 	case 'inserir_diemrenluyen': include 'views/inserir_diemrenluyen.php'; break;
 	case 'import_file': include 'views/import_file.php'; break;
+	case 'duyet': include 'views/diemrenluyen_review.php'; break;
 
 
 	case 'cursos': include 'views/cursos.php'; break;

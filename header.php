@@ -19,25 +19,25 @@
 			<a href="logout.php"><img src="img/rsqh.png" title="Logo" alt="Logo" width="100px"></a>
 			<div id="menu">
 				<!--Thuan add-->
-
 				<?php $quyen = $_SESSION['quyen'];
 					  if ($quyen == 0) {
 				?>
+					
 					<a class="fa fa-book" href="?pagina=diemrenluyen">&nbsp&nbspĐiểm rèn luyện</a>
-				<?php } elseif ($quyen == 1) { 
+				<?php } elseif ($quyen == 1) {
 				?>
-					<a class="fa fa-book" href="?pagina=duyet">&nbsp&nbspReview</a>
+				<a class="fa fa-book" href="?pagina=duyet">&nbsp&nbspReview</a>
+					
 				<?php } else {
 				?>
-					<a class="fa fa-book" href="?pagina=lop">&nbsp&nbspClass</a>
-					<a class="fa fa-graduation-cap" href="?pagina=hocky">&nbsp&nbspSemester</a>
-					<a class="fa fa-user-edit" href="?pagina=users">&nbsp&nbspUsers</a>
-					<a class="fa fa-book" href="?pagina=diemrenluyen">&nbsp&nbspĐiểm rèn luyện</a>
+				<a class="fa fa-book" href="?pagina=lop">&nbsp&nbspClass</a>
+				<a class="fa fa-book" href="?pagina=hocky">&nbsp&nbspSemester</a>
+				<a class="fa fa-book" href="?pagina=users">&nbsp&nbspUsers</a>
+				<a class="fa fa-book" href="?pagina=diemrenluyen">&nbsp&nbspĐiểm rèn luyện</a>
+
 				<?php } 
 				?>
-				
-				<a class="fa fa-book" href="?pagina=lop">&nbsp&nbspClass</a>
-				<a class="fa fa-book" href="?pagina=diemrenluyen">&nbsp&nbspĐiểm rèn luyện</a>
+
 
 				<?php if (isset($_SESSION['login'])) { 
 				?>
