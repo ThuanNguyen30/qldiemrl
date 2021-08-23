@@ -39,7 +39,7 @@ if (isset( $_SESSION['username'])) {
 
 	$data = mysqli_fetch_row($dbuser);
 	$malop = $data[0];
-	$query = "SELECT username FROM users WHERE malop = '$malop' and quyen = 0";
+	$query = "SELECT username,hoten FROM users WHERE malop = '$malop' and quyen = 0";
 	echo $query;
 	$consulta_userofclass = mysqli_query($conexao, $query);
 

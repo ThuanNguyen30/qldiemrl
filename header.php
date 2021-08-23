@@ -35,9 +35,8 @@
 				<a class="fa fa-book" href="?pagina=users">&nbsp&nbspUsers</a>
 				<a class="fa fa-book" href="?pagina=diemrenluyen">&nbsp&nbspĐiểm rèn luyện</a>
 
-				<?php } 
+				<?php }
 				?>
-
 
 				<?php if (isset($_SESSION['login'])) { 
 				?>

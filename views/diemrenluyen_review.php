@@ -8,6 +8,7 @@
 		<thead>
 			<tr class="table-secondary">
 				<th>username</th>
+				<th>hoten</th>
 				<th>Năm học</th>
 				<th>Học Kỳ</th>
 				<th>Tháng</th>
@@ -22,12 +23,23 @@
 		<tbody>
 			<?php
 			//TO DO: DUYET 2 VONG LAP
-			$dsuser = $consulta_userofclass->fetch_array(MYSQLI_ASSOC); 
-			$dsdata = $consulta_alldiem->fetch_array(MYSQLI_ASSOC);
-			while ($dsuser as $user) { 
-				while ($dsdata as $data) {
+			$dsuser = [];
+			while($row = mysqli_fetch_array($consulta_userofclass,MYSQLI_ASSOC))
+			{
+				$dsuser[] = $row;
+			}
+			$dsdata = [];
+			while($row = mysqli_fetch_array($consulta_alldiem,MYSQLI_ASSOC))
+			{
+				$dsdata[] = $row;
+			}
+        
+
+			foreach ($dsuser as $user) { 
+				foreach ($dsdata as $data) {
 					if ($user['username'] == $data['username']) {
 					echo '<tr><td>'.$data['username'].'</td>';
+					echo '<td>'.$user['hoten'].'</td>';
 					echo '<td>'.$data['namhoc'].'</td>';
 					echo '<td>'.$data['hocky'].'</td>';
 					echo '<td>'.$data['thang'].'</td>';
@@ -38,6 +50,7 @@
 					else  {
 						echo '<td style="color:green;">Đã phê duyệt</td>';
 					}
+		
 				
 			?>	
 				<td><a href="?pagina=inserir_diemrenluyen&editar=<?php echo $data['username']; ?>">
